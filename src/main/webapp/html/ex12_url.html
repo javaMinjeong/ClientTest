@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body background="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202307/21/7648135c-336a-4d44-8218-b69a4750db9a.jpg">
+	<!-- ex12_url.html -->
+	<!-- 
+	
+		URL(=URI)
+		- Uniform Resource Identifier
+		- Uniform Resource Locator
+		- 웹상의 자원(패키지, 이미지, 영상, 프로그램 등)을 구분하기 위한 고유 주소값
+		
+		- http://localhost:8090/client/html/ex12_url.html
+		- http://www.naver.com:80/
+		- https://www.naver.com:443/
+		- https://www.google.com:80/
+		
+		1.http://
+		  https://
+		  - 프로토콜(+통신 규약) ex) 군대 암구호 규칙 무전기 오바
+		  - Hyper Text Transfer Protocol > 웹 페이지를 주고 받는 통신 규칙
+		  - Security 
+		  - 웹서버와 클라이언트간의 데이터를 주고 받기 위한 약속
+		
+		2. localhost(=17.0.0.1)
+			- www.naver.com
+			- www.google.com
+			- 도메인 > DMS(Domain Name Service) > Server Ip Address 변환 접속
+			- 서버측 호스트(컴퓨터)의 주소
+		3. :8090
+		   :80
+		   :443
+		   - 웹서버 포트번호
+		   - 아파치 톰캣을 찾기 위해서 사용
+		   
+		4. /client/html/ex12_url.html
+			- client > context Root(=webapp 폴더)
+			- /html/ex12_url.html > 실제 자원의 경로
+			   
+		   	URL 표현 방법
+		   	  
+		   	1. 상대 경로
+		   		- 주소의 시작을 '.'으로 한다.
+		   		-'.': 현재 페이지가 존재하는 폴더의 경로
+		   		
+		   	2. 절대 경로
+		   		- 주소의 시작을 '/'으로 한다.
+		   		- '/': 프로젝트의 루트 폴더의 경로
+		   		- '/client' == webapp 폴더
+		   	3. 로컬 경로
+		   		- 드라이브명으로 시작 > 사용 불가능
+		   	4. 외부 경로
+		   	 	- 남의 사이트 자원 참조
+		   	 	- http://000
+		   	 	- https://000
+		   	 	 		   		  		   	  
+		파일경로
+		- C:\test\aaa\test.txt
+		웹 경로
+		- http://test.com/aaa/test.html
+	-->
+	
+	<h1>페이지 이동하기</h1>
+	<h2>상대 경로</h2>
+	<a href="./ex11_link.html">이동하기</a>
+	<br>
+	<a href="ex11_link.html">이동하기</a>
+	
+	<h1>절대 경로</h1>
+	<a href="/client/html/ex11_link.html">이동하기</a>
+	
+	<h1>로컬 경로</h1> <!-- 내 컴퓨터 기준에서 찾아가지고 쓸 수가 없음  -->
+	<a href="c:\class\code\client\clientTest\src\main\webapp\html/ex11_link.html">이동하기</a>
+	
+	<hr>
+	
+	<h2>상대 경로 버전</h2>
+      <ul>
+         <li><a href="./ex12_url.html">12번 예제</a></li>
+         <li><a href="./member/member.html">member.html</a></li>
+         <li><a href="./admin/admin.html">admin.html</a></li>
+         <li><a href="./member/auth/auth.html">auth.html</a></li>
+      </ul>
+      
+      <h2>절대 경로 버전</h2>
+      <ul>
+         <li><a href="/client/html/ex12_url.html">12번 예제</a></li>
+         <li><a href="/client/html/member/member.html">member.html</a></li>
+         <li><a href="/client/html/admin/admin.html">admin.html</a></li>
+         <li><a href="/client/html/member/auth/auth.html">auth.html</a></li>
+
+	 </ul>
+</body>
+</html>

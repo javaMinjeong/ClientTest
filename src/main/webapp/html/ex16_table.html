@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex16_table.html -->
+	<!-- 
+	
+		테이블 작업
+		1. 기본 작업(table, tr, td)
+		2. 데이터 작성
+		3. 크기 > 전체 너비 > 열 너비
+			** 높이(X) > 데이터 추가/삭제 > 높이 변경해야 하기 때문에...
+			 
+	
+	 -->
+	
+	
+	<h1>주소록</h1>
+	
+	<table border="1" width="600" >	<!-- border="1"이랑 똑같음 -->
+	
+		<!-- 테이블 헤더 -->
+	<!-- 
+		<tr bgcolor="#DDDDDD">
+			<td align="center" width="60"><b>번호</b></td>
+			<td align="center" width="80"><b>이름</b></td>
+			<td align="center" width="60"><b>나이</b></td>
+			<td align="center" width="70"><b>성별</b></td>
+			<td align="center" width="330"><b>주소</b></td>
+		</tr>
+	-->
+		
+		<!--권장 방법-->
+			<tr bgcolor="#DDDDDD">
+				<th width="60">번호</th>
+				<th width="70">이름</th>
+				<th width="80">나이</th>
+				<th width="90">성별</th>
+				<th width="330">주소</th>
+			
+			</tr>
+			
+		
+		<!-- 
+		
+			테이블 본문(데이터) 
+			1. 고정폭 > 왼쪽, 가운데
+			2. 가변폭 > 왼쪽, 
+			3. 숫자	> 우측(자릿수)
+		
+		
+		
+		-->
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		<tr>
+			<td align="center">1</td>
+			<td align="center">홍길동</td>
+			<td align="center">20</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 역삼동</td>	<!--너비 자동 계산 되어서 하나가 길어지면 나머지가 줄어들음  -->
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">호호호</td>
+			<td align="center">24</td>
+			<td align="center">여자</td>
+			<td>서울시 강동구 천호동</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">아무개</td>
+			<td align="center">25</td>
+			<td align="center">남자</td>
+			<td>서울시 강남구 대치동</td>
+		</tr>
+		
+		
+		
+	</table>
+	
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex17_table.html -->
+	<!--
+	
+
+	 셀병합 
+	 1. 가로 셀병합
+	 2. 세로 셀병합
+	
+	-->
+	
+	 <h1>원본 테이블</h1>
+	
+	<table border width="200" height="200">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr> 
+	</table>	
+	
+	 
+	<!-- 각각의 <tr>내의 <td>개수는 동일해야한다. -->	
+	
+	<h1>가로 셀병합</h1>
+	
+	<table border width="200" height="200">
+		<tr>
+			<td colspan="2">1</td>	<!-- colspan="N"이 td N개 역할을 함 -->
+			<!-- <td>2</td> -->
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>	
+	</table>	
+	
+	<h1>세로 셀병합</h1>
+	
+	<table border width="200" height="200">
+		<tr>
+			<td rowspan="2">1</td>	<!-- colspan="N"이 td N개 역할을 함 -->
+			<td>2</td> 
+		</tr>
+		<tr>
+			<!-- <td>3</td> -->	<!-- rowspan="N"이 td N개 역할을 함 밑으로 치고 내려옴 -->
+			<td>4</td>
+		</tr>	
+	</table>	
+	
+	
+</body>
+</html>

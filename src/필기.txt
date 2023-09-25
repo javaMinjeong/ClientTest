@@ -1,0 +1,179 @@
+쓸 가능성 높은 웹 서버 프로그램
+1.Apache Tomcat
+2.nginx
+3.Zeus
+
+
+1. 이클립스 워크스페이스 위치 C:\class\code\client
+
+2. apache-tomcat 사이트 접속
+
+3. 왼쪽 download > tomcat 9 > 64bit windows zip download
+
+4. C:\class\dev\로 apache- tomcat 9.0.8 이동
+
+* 이클립스 설정
+
+1.기존 * epf import
+
+or
+
+2.새로 설정
+ 2.1 windows preference
+ 
+	encoding > workspace > textfile encoding > utf-8 
+	encoding > css FIles > UTF-8
+	encoding > HTML 	 > UTF-8
+	encoding > JSP  	 > UTF-8
+	encoding > CONTENT TYPES > TEXT > DEFAULT > ENCODING UTF-8 > UPDATE
+			
+ 2.2 FONTS
+ 2.3 server
+	- Apache Tomcat 9.0 > 이클립스 등록(참조)
+	
+	C:\class\dev\apache-tomcat-9.0.80\webapps\ROOT > 저장 hello.html -> 저장 후 열면 브라우저로 열림.
+	bin -> 실행파일 들어있음
+	start up. bat
+	
+	클라이언트(브라우저) >> 서버 hello.html 서버(아파치 톰캣)
+	
+	8080포트
+	1. 오라클 사용(1521,8080)
+	
+	2. 톰캣(8080)
+	
+	URL > http://localhost:8080/hello.html
+	
+	- CONF > server xml > 8090
+	URL > http://localhost:8090/hello.html
+		  http://192.168.10.30:8090/hello.html
+	
+	start.bat 눌러서 콘솔 실행 후 링크 입력!! 
+	
+	file new others web dynamic~
+	
+	콘솔 끄고 하기!!!
+	
+	http://localhost:8090/Hello ==webapps > context Root				--hello > context root
+	webapp > hello.html
+	
+	http://localhost:8090/Hello/hello.html
+	
+	http://localhost:8090/test/hello.html
+	
+	http://localhost:8090/hello/hello.html
+	
+	http://localhost:8090/hello.html
+	
+	hello >test
+	
+	
+	새프로젝트 > NEW > Dynamic~ > "ClientTest"
+	
+	context root > client		이거는 주로 소문자로 쓰고 플젝 이름 다 노출하지 않기
+	
+	설정 -> 기본앱 > 웹브라우저
+
+
+--2교시
+Web + Client(브라우저)
+ - Client-Side
+ - Front-end
+ - HTML, CSS, JavaScript..
+
+Web + Server (아파치 톰캣)
+- Server-side
+- Back-end
+- Servlet, JSP. Spring..
+
+
+웹페이지(웹문서)를 제작하는 언어
+
+1. HTML 
+	- 웹 문서를 작성한다.
+	- 페이지의 골격을 작성
+	- 페이지의 출력 내용을 작성
+	
+2. CSS
+	- 디자인 언어
+	- HTML 페이지 + 서식 작성 역할
+	
+--1,2번 정적
+
+3. JavaScript -- 동적
+	- 프로그래밍 언어(자바)
+	- 웹페이지 + 프로그래밍 기능
+	
+HTM, Hyper Text Markup Language
+- 하이퍼 텍스트 마크업 언어
+- 프로그래밍 언 어(X) > 프리젠테이션 언어(O) : 무언가를 표현하는 기능을 가진 언어
+- Hyper Text > 링크
+- Markup > 언어 표기법: > <키워드>
+		 - HTML, XHTML, XML, VoiceXML, **ML
+- SGML > 메타언어 > 다른 언어를 정의할 수 있는 기능을 가진 언어		 	
+		- HTML, XML
+		
+HTML 주관 단체
+- W3C, World Wide Web Consortiun ,, www 모든 기술 생성 + 주관
+- https://w3.org/
+- WAHTWG
+
+- 팀 버너스리
+
+- HTML 1.0 ~ HTML 5(2014년)
+- HTML 4.01 > 가장 대중화 된 버전
+- XHTML 1.0 > HTML + XML > 문법 강력하게 준수
+- 웹 표준화 진행(개발자)
+- HTML 5 *
+- HTML Living Standard > 버전 명시(X) > 기능 조금씩 추가 발전
+- HTML
+
+- 브라우저 전쟁(1차, 2차, 3차..)
+
+- Netscape Navigator(Netscape)
+- Internet Explorer(Microsoft)
+
+HTML > W3C
+
+MS(독자노선) <-> 나머지(웹 표준 준수)
+
+IE(x) -> Edge(o)
+
+
+HTML 개발 환경
+- 텍스트 편집기
+	1. 메모장
+	2. IDE > Eclipse, IntelliJ, Visual Studio 등.. -> HTML
+	3. Sublime Text, Atom, Brakets, Visual Studio Code등..	-> CSS, JavaScript
+
+- 실행 환경/ 도구 > 브라우저(컴파일러, 실행기)
+	1. 	크롬
+	2. 엣지
+	3. 파이어폭스
+	4. 사파리
+	5. 모바일 브라우저(*)
+	
+HTML 언어 구성요소
+1. 태그(Tag), 엘리먼트(Element)
+2. 속성(Attribute)
+3. 텍스트(PCDATA)
+4. 엔티티(Entity)
+5. 주석(Comment)
+6. 선언문(DEclaration)
+7. 외부요소
+8. 등등..
+
+HTML 문서 확장자
+- *.html
+- *.htm
+
+
+<!DOCTYPE html> 
+- html5
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-xml trans~0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+-htrml4.01 trans~	
