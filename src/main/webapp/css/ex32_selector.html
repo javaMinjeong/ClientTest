@@ -47,9 +47,9 @@
             background-color: rgba(255,0,0,.3);
         } */
 
-        body{
+        /* body{
             cursor: progress;
-        }
+        } */
 
         /* 체크박스, 라디오, 셀렉트 > CSS 적용이 잘 안됨 */
         /* .cb{
@@ -61,7 +61,7 @@
 
         } */
 
-        .cd{
+        .cb{
             /* 불투명도(0~1) */
             opacity: 0.2;
         }
@@ -77,7 +77,7 @@
             /* border: 10px solid gold; */
         }
 
-        #cb-cat:checked+#cat{
+        #cb-cat:checked + #cat{
             /* visibility: visible; */
             /* border-color:  red; */
             /* width: 300px; */
@@ -86,7 +86,7 @@
             top: 100px;
         }
 
-        #cb2+div{
+        #cb2 + div{
             /* visibility: hidden; */
             display: none ;
         }
@@ -136,34 +136,47 @@
 
     <div id="item">
         <input type="checkbox" id="cd3">
-       <label for=cb3>java</label>
-        <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla tempore alias odit non. Asperiores, alias numquam vitae voluptatum cupiditate incidunt nemo fuga at, quia id esse maiores eaque ex.</div>
+        <label for=cb3>java</label>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla tempore alias odit non. Asperiores, alias numquam vitae voluptatum cupiditate incidunt nemo fuga at, quia id esse maiores eaque ex.
+        </div>
 
     </div>
-    
+    <hr>
 
     <label for="cb2">제목</label>
-    <input type="checkbox" id="b2">
-        
-    </label>
+    <input type="checkbox" id="cb2">
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum,
+        dolor, voluptatem illo repudiandae obcaecati eveniet impedit atque sit ab
+        odit non cupiditate recusandae. Maxime reiciendis ratione magnam ab
+        aliquam.
+      </div>
+  
+      <hr />    
+    
 
     <details>
         <summary>제목</summary>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium culpa, aut voluptatibus labore a minima error reprehenderit. Eum possimus saepe excepturi rem fugit. Necessitatibus, odio? Nihil, ex dolores! Numquam?</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium culpa, aut voluptatibus labore a minima error reprehenderit. Eum possimus saepe excepturi rem fugit. Necessitatibus, odio? Nihil, ex dolores! Numquam?
+        </p>
     </details>
+    <hr>
 
     <div>
         <input type="checkbox" id="cb-cat">
         <img src="../asset/images/catty01.png" id="cat">
-
     </div>
+    <hr>
+
     <div>
         <input type="checkbox" class="cb">
         <input type="checkbox" class="cb">
         <input type="checkbox" class="cb">
     </div>
 
-
+    <hr>
 
     <div id="list">
         <input type="text" value="1" required>
