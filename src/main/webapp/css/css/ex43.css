@@ -1,0 +1,67 @@
+/* ex43_transform.html */
+
+body{margin-bottom: 500px;}
+
+.box{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#box1{
+    background-color: tomato;
+}
+#box2{
+    background-color: gold;
+}
+#box3{
+    background-color: cornflowerblue;
+}
+
+/* 
+
+    Transform 변형
+    - 위치, 배율, 회전, 왜곡
+    1. translate(): 위치 변형(이동)
+    2. scale(): 배율 변형(확대/축소)
+    3. rotate(): 회전 변형
+    --------------------------------------
+    4. skew(): 왜곡(비틀기)
+    5. matrix(): 사용자 정의형(1~4번) > 행렬
+
+
+*/
+
+#box1{
+    /* position: relative; */
+    /* transform: translate(100px, 100px); */
+    /* transform: scale(1.2,1); */
+    /* width: 220px; */
+    /* transform:  rotate(-30deg); */
+    /* transform:  skew(30deg, 30deg); */
+}
+
+#box1:hover{
+    /* transform: translate(0px, 50px); */
+    /* transform:  scale(1.2, 1.2); */
+    transform: rotate(45deg);
+}
+
+#box2{
+    transform: scale(-1,1);  /*입체감만 없을뿐 360도 회전 중*/
+}
+
+input[type=text]{
+    font-size: 2rem;
+    padding: 5px;
+    outline: none;
+    /* transform: rotate(45deg); */
+    transform: scale(-1,1);
+}
+
+#cat > img:hover{
+    /* transform: translate(0px -20px); */
+    /* transform: scale(1.2, 1.2); */
+    transform: translate(0, 20px) scale(1.5, 1.5);
+}
