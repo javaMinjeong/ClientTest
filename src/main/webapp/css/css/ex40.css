@@ -1,0 +1,9 @@
+/* ex40_background.html */
+
+html{
+    background-image: url(../../asset/images/gimbal.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-size: cover;
+    background-attachment: fixed;   /*문서의 길이가 아닌 화면의 크기에 따라 고정됨*/
+}

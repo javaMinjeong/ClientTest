@@ -1,0 +1,30 @@
+/* ex39.css */
+
+/* 
+
+    background
+    1. background-color
+    2. background-image
+    3. background-repeat
+    4. background-position
+    5. background-attachment
+    6. background-size
+
+
+*/
+
+#box{
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+
+    background-image: url(../../asset/images/cat05.jpg);
+    /* background-size: 400px 400px;   width height */
+    /* background-size: 400px auto; 장축*/
+    /* background-size: auto 400px;    단축 */
+    /* background-size: cover; 보통 많이 쓰임*/
+    background-size: contain;   /*보통 많이 쓰임*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
