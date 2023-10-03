@@ -127,10 +127,46 @@
         /* background-color: lightgrey; */
         border: 1px solid;                                   /*기본값 1px soldi 깔고 감*/
         outline: invert;                /*내가 지정하는대로 나오게 만들어야함*/
+        }
+
+        .tbl3 tr:hover{
+            background-color: lightgray;
+            
+        }
+
+
+
+    /* 테이블 5  */
+    
+    #list4 th{
+    background-color: lightgrey;
     }
 
-    /* 테이블 4  */
-      
+    /* 테이블 내부 선 */
+    #list4 th, #list4 td{
+            border: 1px solid lightgray;
+            padding: 5px;
+    }
+
+    /* 테이블 속성 별 너비 */
+    #list4 #col1{width: 50px;}
+    #list4 #col2{width: 100px;}
+    #list4 #col3{width: 50px;}
+    #list4 #co14{width: 60px;}
+    #list4 #col5{width: auto;}
+
+    /* 테이블 정렬 */
+    #list4 .cell1,
+    #list4 .cell2,
+    #list4 .cell3,
+    #list4 .cell4 {
+    text-align: center;
+    }
+
+    /* 주소 한 칸 띄기 */
+    #list4 .cell5{
+    padding-left: 10px;
+    }
 
     </style>
 </head>
@@ -387,7 +423,7 @@
           </table>   
           <!-- 4번 테이블 -->
           <h1><span style="color: hwb(300 53% 14%);">M</span>ember list</h1>
-          <table>
+          <table id="list3" class="tbl4">
            <tr>
            <th id="col1">No</th>
            <th id="col2">Name</th>
@@ -470,7 +506,7 @@
            </table>   
            <!-- 5번 테이블 -->
            <h1><span style="color: hsl(170, 22%, 50%);">M</span>ember list</h1>
-           <table>
+           <table id="list4" class="tbl5">
             <tr>
             <th id="col1">No</th>
             <th id="col2">Name</th>
@@ -554,4 +590,4 @@
 
 
 </body>
-</html>
+</html> 

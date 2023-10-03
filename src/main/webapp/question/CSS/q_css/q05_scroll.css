@@ -1,0 +1,23 @@
+/* q05.scroll.css */
+#box {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+#txt {
+    width: 500px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 10s;
+    transition-timing-function: linear;
+}
+
+#txt:hover {
+    top:-5600px;
+}
