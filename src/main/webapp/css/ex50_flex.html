@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            display: flex
+            - flex box, flexiable box
+            - 레이아웃 작성 > 내부의 요소를 어떻게 배치
+            - float + position + margin + padding
+        
+        */
+
+        /*
+        1번 방법
+         #box{
+            border: 10px solid black;
+            font-size: 0;
+        }
+
+        #box .item{
+            display: inline;
+            font-size: 1rem;
+        } 
+        */
+
+        /* 2번 방법 float -> 가상::after clear 많이 씀  */
+        /* #box{
+            border: 10px solid black;
+        }
+
+
+        #box::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #box .item{
+            float: left;
+        } */
+        
+        
+        /* 3번 방법 최근에 많이 씀 over-flow */
+        /* #box{
+            border: 10px solid black;
+            overflow: hidden;
+        }
+
+        #box .item{
+            float: left;
+        } */
+
+
+        #box .item:nth-child(5n + 1){ background-color: tomato;}
+        #box .item:nth-child(5n + 2){ background-color: orange;}
+        #box .item:nth-child(5n + 3){ background-color: gold;}
+        #box .item:nth-child(5n + 4){ background-color: greenyellow;}
+        #box .item:nth-child(5n + 5){ background-color: cornflowerblue;}
+
+        /* display 한 번으로 끝남 */
+        #box{
+            border: 10px solid black;
+            width: 800px;
+            height: 800px;
+
+            display: flex;
+
+            /*
+            ****
+            기본 상태(display: flex)
+            - 메인축(아이템을 나열) : 가로(왼쪽 > 오른쪽)
+            - 수직축(메인축의 직각 방향): 세로(위쪽 > 아랫쪽)
+            - 아이템 너비: 요소만큼
+            - 아이템 높이: 부모만큼 
+
+            */
+
+            /*
+            
+                row: 행을 메인축으로
+                column: 열을 메인축으로
+
+                flex-direction
+                아이템의 배치 방향            
+            
+            */
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* 
+            
+            flex wrap
+            - 자동 줄바꿈
+
+            */
+
+            /* flex-wrap: wrap-reverse; 위아래 바뀐고 */
+            /* flex-wrap: wrap  */
+
+            /* 
+                justify 관련 속성명
+                1. justify -
+                    : 메인축 방향
+                3. allign - 
+                    : 수직축 방향
+
+                justify-content
+                - 메인축 방향으로 아이템을 어떻게 정렬    
+            */
+
+            /* flex-direction: row-reverse; 순서가 역순54321 */
+            /* justify-content: flex-end; 시작/끝에 몰리게 해주세요 12345 순서 유지 */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; 
+            처음과 마지막에도 양 끝에 공백이 생김 요소와 요소 사이의 공백 1/2 크기가 생김 */
+            /* justify-content: space-evenly;
+             양 끝의 공백 크기가 더 넓음 모든 공백을 동등하게 할당*/
+          
+            /* 
+            
+            allign-items
+            - 수직축 방향로로 아이템을 어떻게 정렬?
+            - justify-content 반대
+            
+            */
+
+            /* justify-content: flex-start;
+            align-items: stretch; */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+        }
+
+        #title1, #title2{
+            font-variant: small-caps;
+            color: #333;
+            font-family: Arial;
+            border-bottom: 1px solid #999 ;
+            width: 600px;
+        }
+
+        #title1 small{
+            font-size: 1rem;
+            float: right;
+            margin-top: 15px;
+        }
+
+        #title2 small{
+            font-size: 1rem;
+            margin-bottom: 3px;
+            
+        }
+
+        #title2{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        /* #parent{
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            padding-top: 200px;
+            padding-left: 200px;
+        }
+
+        #child{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        } */
+
+        /* #parent{
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            position: relative;
+            left: 0px;
+            right: 0px;
+        }
+
+        #child{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            position: absolute;
+            left: 200px;
+            right: 200px;
+        } */
+
+        #parent{
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #child{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+         
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex50_flex.html -->
+    <div id="box">
+        <div class="item">1. 딸기</div>
+        <div class="item">2. 바나나</div>
+        <div class="item">3. 포도</div>
+        <div class="item">4. 파인애플</div>
+        <div class="item">5. 귤</div>
+        <!-- <div class="item">1. 딸기</div>
+        <div class="item">2. 바나나</div>
+        <div class="item">3. 포도</div>
+        <div class="item">4. 파인애플</div>
+        <div class="item">5. 귤</div>
+        <div class="item">1. 딸기</div>
+        <div class="item">2. 바나나</div>
+        <div class="item">3. 포도</div>
+        <div class="item">4. 파인애플</div>
+        <div class="item">5. 귤</div>
+        <div class="item">1. 딸기</div>
+        <div class="item">2. 바나나</div>
+        <div class="item">3. 포도</div>
+        <div class="item">4. 파인애플</div>
+        <div class="item">5. 귤</div> -->
+    </div>
+
+    <hr>
+
+    <h1 id="title1">Main Title<b>add</b><small>Sub Title</small></h1>
+
+    <hr>
+
+    <h1 id="title2">Main Title<b>add</b><small>Sub Title</small></h1>
+
+<!-- 
+    add를 추가해서 보면 다른 점이 보임.
+     <h1 id="title1">Main Title<b>add</b><small>Sub Title</small></h1>
+
+    <hr>
+    space between떄문에 공백 생김
+    <h1 id="title2">Main Title<b>add</b><small>Sub Title</small></h1> -->
+
+    <hr>
+    
+    <!-- <h1>또 다른 내용물</h1>
+    <h1>또 다른 내용물</h1>
+    <h1>또 다른 내용물</h1> -->
+   
+
+    <div id="parent">
+        <div id="child"></div>
+        <div>형제</div>
+    </div>
+
+
+</body>
+</html>
