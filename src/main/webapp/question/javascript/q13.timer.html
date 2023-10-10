@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #num {
+
+			font-size: 10em;
+			font-weight: bold;
+			text-align: center;
+			width: 250px;
+			display: block;
+			margin: 100px auto;
+			border: 0px;
+		}
+
+    </style>
+</head>
+<body>
+    <!-- ex13_timer.html -->
+    <!-- 조건..
+    카운트 다운을 구현하시오.
+    카운트가 0이 되면 구글로 이동하시오.
+    esc 키를 누르면 카운트를 중단하시오. -->
+
+    <div>
+    <input type="text" name="num" id="num" value="10">
+    </div> 
+
+    <script>
+        var n = 10;
+        var timer = 0;
+
+        num.on
+        timer = setInterval(f1, 1000);
+
+        function f1(){
+            n--;
+            document.all.num.value = n;
+        }
+
+        // var timer = setInterval(function() {
+		// 	n--;
+		// 	document.all.num.value = n;
+
+		// 	if (n == 0) {
+		// 		clearInterval(timer);
+		// 		location.href = "http://google.com";
+		// 	}
+		// }, 1000);
+
+		// window.onkeydown = function() {
+		// 	if (event.keyCode == 27) {
+		// 		clearInterval(timer);
+		// 		document.body.bgColor = "tomato";
+		// 	}
+		// };
+    
+
+    </script>
+</body>
+</html>
