@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
 
         } */
 
-       h1{
+        /* h1{
             font-family: italic;
             font-style: bold;
             color:gray;
@@ -22,13 +23,22 @@
             font-style: bold;
             color: hsl(0, 0%, 22%);
             margin-bottom: 15px;
+        } */
+
+        input[type=text] {
+            outline: none;
         }
 
-       
+        form {
+            margin: 20px auto;
+        }
 
-
+        form>div {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
+
 <body>
     <!--q01_click.html  -->
     <!-- 
@@ -39,31 +49,46 @@
 
      -->
 
-     <h1>데이터 입력</h1>
+    <form name='form1'>
+        <h1>데이터 입력</h1>
 
-     <div>이름 : <input type="text" name="txt1"> </div> 
-     <div>나이 : <input type="text" name="txt2"></div> 
-     <div>별명 : <input type="text" name="txt3"> </div>
+        <div>이름 : <input type="text" name="txt1"> </div>
+        <div>나이 : <input type="text" name="txt2"></div>
+        <div>별명 : <input type="text" name="txt3"> </div>
+        <div>
+            <input type="button" value="Long" name="btnLong">
+            <input type="button" value="Short" name="btnShort">
+        </div>
+    </form>
 
-     <form name='form1'>
-     <input type="button" value="Long" name="btn1">
-     <input type="button" value="Short" name="btn2">
-     </form>
+    <script>
 
-     <script>
-     document.form1.btn1.onclick = m1;
-     document.form1.btn2.onclick = m2;
+        var txtName, txtAge, txtNick, btnLong, btnShort;
 
-     function m1(){
-        //길이 조절
-       btn1.value.length < 50
-     }
+        function init() {
+            txtName = window.document.form1.txtName;
+            txtAge = window.document.form1.txtAge;
+            txtNick = window.document.form1.txtNick;
+            btnLong = window.document.form1.btnLong;
+            btnShort = window.document.form1.btnShort;
 
-     function m2(){
-        //길이 조절
-        btn1.value.length < 20
-     }
+            btnLong.onclick = resizeLong;
+            btnShort.onclick = resizeShort;
+        }
+
+        function resizeShort() {
+            txtName.size = 20;
+            txtAge.size = 20;
+            txtNick.size = 20;
+        }
+
+        function resizeLong() {
+            txtName.size = 50;
+            txtAge.size = 50;
+            txtNick.size = 50;
+        }
     </script>
 
 </body>
+
 </html>

@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            
-            color: rgb(122, 122, 122);
-            
+        form {
+            width: 200px;
+            margin: 20px auto;
         }
-        h1{
-            text-align: center;
+    
+        form > div {
+            margin-bottom: 15px;
         }
-
-        
-        
+    
+        form > div > input {
+            display: block;
+            margin-bottom: 5px;
+            outline: none;
+        }
+    
+        #txtId { width: 150px; }
+        #txtMessage { width: 250px; border: 0px solid transparent; outline: none; color: red; }
     </style>
 </head>
-<body>
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onload='init();'>
     <!-- q02.key.html -->
     <!-- 
         아이디 유효성 검사를 하시오.
@@ -26,12 +32,38 @@
         - onkeyup
 
      -->
-    <h1>회원 가입</h1>
-    <div>아이디 : <br><input type="text" name="txt1"></div>
+     <form name="form1">
+        <h1>회원 가입</h1>
+
+        <div>
+            아이디 : <input type="text" name="txtId" autofocus>
+            <input type="text" name="txtMessage" id="txtMessage">
+        </div>
+        
+    </form>
     
     <script>
 
-        if()
+        var txtId, txtMessage;
+    
+        function init() {
+            txtId = window.document.form1.txtId;
+            txtMessage = window.document.form1.txtMessage;
+            txtId.onkeyup = valid;
+        }
+    
+        function valid() { 
+            if (txtId.value.length == 0) {
+                txtMessage.value = "";
+            } else if (txtId.value.length < 4) {
+                txtMessage.value = "아이디가 너무 짧습니다.";
+            } else if (txtId.value.length > 12) {
+                txtMessage.value = "아이디가 너무 깁니다.";
+            } else {
+                txtMessage.value = "아이디가 적합합니다.";
+            }
+        }
+       
     </script>
    
     
