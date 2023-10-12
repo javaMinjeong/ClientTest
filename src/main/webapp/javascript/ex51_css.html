@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        #box1{
+            border: 1px solid black;
+            width: 200px; height:  200px;
+        }
+
+        .one{font-size: 3rem;}
+        .two{color: cornflowerblue;}
+        .three{text-decoration: underline;}
+
+        body{
+            margin-bottom: 300px;
+        }
+
+    </style>
+     <script src="https://kit.fontawesome.com/34b01f7151.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ex51_css.html -->
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+
+    <div id="box1" >상자</div>
+
+    <hr>
+
+    <h1>텍스트</h1>
+
+    <div class="tool">
+        <button type="button" id="btn2"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" id="btn3"><i class="fa-solid fa-minus"></i></button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis autem aperiam quo voluptatibus tempore iste doloribus dolores quidem quibusdam ab sint temporibus asperiores labore consectetur sit atque cumque, quod voluptate amet sed animi vel natus accusantium. Dolores ratione eligendi tempore nihil quam et facilis necessitatibus quibusdam natus assumenda expedita consequatur placeat veniam, eius optio iusto commodi explicabo a deleniti voluptatem. Quo autem ad repudiandae omnis excepturi libero. Ea reprehenderit praesentium dicta quos. Officia itaque facilis harum magni esse suscipit! Soluta, officiis id quod dolorum eum ab fugit? Tenetur officia repellendus id magnam consectetur eligendi temporibus laborum aspernatur sit molestias omnis laboriosam magni, quis, suscipit reiciendis labore animi dicta sapiente perferendis aperiam qui vero neque. At, odio amet voluptate dolores eveniet et. Quibusdam, hic id eveniet et sed, quam non nobis quis repudiandae numquam praesentium animi est eius adipisci aperiam! Velit, eveniet fugit! Itaque, neque dolore. Minima praesentium qui molestias tempore ex impedit unde saepe, quia nemo rem alias, cum dicta quisquam quam fuga velit mollitia repellendus delectus nam ea in assumenda. Assumenda dolor fugiat aliquid, facilis iure in? Molestias adipisci magni molestiae dignissimos. Reiciendis a reprehenderit pariatur culpa quis doloribus aut, illo quae, dolores, porro consequatur corrupti? Soluta iste ipsam esse cumque veritatis ex. Quasi deleniti, delectus illo ex voluptatum vel voluptates praesentium. Debitis blanditiis voluptate culpa iste optio eius dolores ut soluta dolorem sunt asperiores suscipit, cum accusantium esse corrupti expedita sequi voluptas dignissimos non placeat tempore laboriosam praesentium. Ducimus a odio natus nisi. Quibusdam fugit, molestiae aut voluptas explicabo doloremque itaque mollitia, pariatur placeat aliquam possimus sint, rem voluptatibus deserunt ipsum. Repudiandae consequatur tempora asperiores suscipit perspiciatis quos? Ducimus doloremque dicta dolores sunt reprehenderit, a blanditiis nisi cupiditate esse maxime, modi neque nulla eaque omnis, accusamus ad voluptatum! Maiores corporis ipsam in minus nisi at molestiae debitis autem.</p>
+
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const box1 = document.getElementById('box1');
+
+        btn1.addEventListener('click', function(){
+
+            /*
+            
+                JavaScript > CSS조작
+                1. 모든 태그 > style 속성 제공(인라인 스타일 시트)
+                    > 자바 스크립트 style 프로퍼티 제공
+                2. class 조작 
+                    - className 프로퍼티
+                    - classList 프로퍼티
+
+
+            
+            */
+            //btn1.value = 'Button';
+            // box1.style = 'color: blue'; //BOM
+
+            // box1.setAttribute('style', 'color: gold');
+
+            //조작적인 관리 어려움
+            //box1.innerHTML = '<input>';
+            // box1.style = 'color: blue; font-size: 2rem;';
+
+            //style 프로퍼티 > 접근 가능 속성 > 프로퍼티(배열) 제공
+            // box1.style = 'color: blue';
+            // box1.style.color = 'blue';
+            // box1.style.fontSize = '2rem';
+            // box1.style.backgroundColor = 'gold';
+
+            // box1.style['color'] = 'gold';
+            // box1.style['font-size'] = '2rem'
+            // box1.style['background-Image'] = 'url(../asset/images/catty01.png)'; 
+            
+            //상자의 현재 너비?
+            // alert(box1.style.width);
+            // box1.style.width = '300px'; //inlinestyle로 들어감
+
+            //버튼 클릭 > 상자의 너비 > 현재 너비 + 50px
+            // box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+            //css 적용 방식 무관 > 현재 객체에 적용된 모든 CSS 속성을 반환
+            const list = window.getComputedStyle(box1);
+
+            alert(box1.style.width);
+            alert(list.width);
+            alert(list.getPropertyPriority('width'));
+
+        }); //btn1.onclick
+
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const content = document.getElementById('content');
+
+        let size = 16;
+
+        btn2.addEventListener('click', function(){
+                // size--;
+                // content.style.fontSize = size + 'px';
+
+                //<p style="one">
+                // content.className = 'one two';
+                content.classList.add('one');
+                content.classList.add('two');
+
+                });
+                
+                btn3.addEventListener('click', function(){
+                    // size ++;
+                    // content.style.fontSize = size + 'px';
+                    
+                //<p style="one two three">
+                // content.className += ' three';
+                content.classList.add('three');
+                content.classList.remove('two');
+        });
+
+    </script>
+
+</body>
+</html>
