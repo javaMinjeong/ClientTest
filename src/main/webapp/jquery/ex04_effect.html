@@ -68,22 +68,67 @@
                 // margin-left: '+=50px'
                 // marginLeft: '+=50px'
                 'margin-left': '+=50px'
+            }, 1000, function(){
+                // alert('애니메이션이 끝날 때 하고 싶은 일');
+                $('h1').text('jQuery Effect' + n);
+                n++;
+
+                if(n>5){
+                    $('btn1').off('click');
+                }
             });
 
 
         });
+
+        let n = 1;
         
         $('#btn2').click(function(){
             // $('#box').show('slow');
             // $('#box').fadeIn();
             // $('#box').slideDown();
-        });
+
+            // $('#box').animate({
+            //     width: '400px'
+            // }, 600, function(){
+            //     $('#box').animate({
+            //         height: '400px'
+            //     }, 600);    
+            // });
+
+
+            // $('#box').animate({
+            //     width: '400px'
+            // });
+
+            // $('#box').animate({
+            //     height: '400px'
+            // });
+
+            //*** 거의 대부분의 jQuery 메소드는 반환값이 jQuery객체다.    
+            // $('#box').animate({
+            //     width: '400px'
+            // }).animate({
+            //     height: '400px'
+            // });
+
+            $('#box')
+                .slideUp()
+                .slideDown()
+                .fadeOut()
+                .fadeIn()
+                .animate({
+                    borderWidth: '10px'
+                });
+        });        
         
         $('#btn3').click(function(){
             // $('#box').toggle(1000);
             // $('#box').fadeToggle();
             // $('#box').slideToggle();
         });
+        //깃 확인용
+        
 
     </script>
 </body>
