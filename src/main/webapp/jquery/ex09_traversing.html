@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl td{
+            border: 1px solid black;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex09_traversing.html -->
+    <h1>테이블</h1>
+
+    <!-- table#tbl>tr*10>td{item}*5 -->
+    <table id="tbl">
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+    </table>
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+    <script>
+        //<td> X 50개 이벤트 추가
+        // $('#tb1 td')
+        //     .mouseover(function(){
+        //         $(this).css('background-color', 'gold');
+        // })
+
+        //     .mouseout(function(){
+        //         $(this).css('background-color', 'transparent');
+        // });   
+        
+        $('#tbl1 td').on({
+            mouseover: function(){
+                // $(this).css('background-color', 'gold');
+                // $(event.target).css('background-color', 'gold');
+                $(event.currentTarget).css('background-color', 'gold');
+            },
+            mouseout: function(){
+                // $(this).css('background-color', 'gold');
+                // $(event.target).css('background-color', 'gold');
+                $(event.currentTarget).css('background-color', 'gold');
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>
